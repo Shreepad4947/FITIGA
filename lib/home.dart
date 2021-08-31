@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:womenwiin/bottomNav.dart';
+// import 'package:wordpress_api/wordpress_api';
+// import 'package:wordpress_client/wordpress_client.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -9,6 +11,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+ 
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +26,7 @@ class _HomeState extends State<Home> {
       body: Align(
         alignment: Alignment.bottomCenter,
         child: botomNav()),
+     
       // bottomNavigationBar: BottomNavigationBar(items: [],backgroundColor: Colors.teal,),
     );
   }
@@ -35,21 +42,26 @@ Widget buildDrawer() {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(height: 10),
-            Container(
+            Center(
+              child: Container(
 
-              // width: 100,
-              height: 200,
-              width: double.maxFinite,
-              margin: EdgeInsets.symmetric(vertical: 30),
-              child: Image.asset(
-                ('assets/photo.jpg'),
-                fit: BoxFit.fill,
-                colorBlendMode: BlendMode.color,
+                // width: 100,
+                height: 200,
+                width: 200,
+                margin: EdgeInsets.symmetric(vertical: 30),
+                child: ClipRRect(
+                   borderRadius: BorderRadius.circular(100),
+                  child: Image.asset(
+                    ('assets/photo.jpeg'),
+                    fit: BoxFit.fill,
+                    colorBlendMode: BlendMode.color,
+                  ),
+                ),
               ),
             ),
             
             Text("Women Wiin",
-                style: TextStyle(
+                style: TextStyle(fontSize:25,
                     color: Colors.teal[900], fontWeight: FontWeight.bold)),
             Container(height: 5),
             Divider(color: Colors.white),

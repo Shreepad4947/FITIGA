@@ -59,7 +59,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      // backgroundColor: Colors.green[50],
+      backgroundColor: Colors.white,
       body: Align(
         child: Container(
           width: 250,
@@ -72,8 +73,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
                 width: 100,
                 height: 100,
-                child: Image.asset(('assets/photo.jpg'),
-                     fit: BoxFit.fill),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(60),
+                  child: Image.asset(('assets/photo.jpeg'),
+                       fit: BoxFit.fill),
+                ),
               ),
               Container(height: 5),
               Column(
@@ -83,7 +87,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: [
                       Text("FITIG",
                           style:TextStyle(fontSize: 19,
-                              color: Colors.green[900], fontWeight: FontWeight.bold)),
+                              color: Colors.black87, fontWeight: FontWeight.bold)),
                       Text(" ASSOCIATION",
                           style:TextStyle(fontSize: 19,
                               color: Colors.black87, fontWeight: FontWeight.bold)),
